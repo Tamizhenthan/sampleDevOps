@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/your-username/ci-cd-sample-app.git'
+                git 'https://github.com/Tamizhenthan/sampleDevOps.git'
             }
         }
         
@@ -36,7 +36,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying application...'
-                sh 'scp -r ./ your-server-user@your-server-ip:/path/to/deploy'
+                sh 'scp -r ./ ubuntu@3.110.190.34:/var/lib/jenkins'
             }
         }
     }
